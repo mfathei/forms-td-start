@@ -14,6 +14,20 @@ export class AppComponent {
 
   suggestUserName() {
     const suggestedName = 'Superuser';
+    // this.signupForm.setValue({ // should set values for all form controls
+    //   userData: {
+    //     username: suggestedName,
+    //     email: ''
+    //   },
+    //   secret: 'pet',
+    //   questionAnswer: '',
+    //   gender: 'Male'
+    // });
+    this.signupForm.form.patchValue({ // can set just one form control
+      userData: {
+        username: suggestedName
+      }
+    });
   }
 
   // onSubmit(form: HTMLFormElement) {
